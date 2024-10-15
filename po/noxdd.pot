@@ -1,0 +1,337 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The noxdd Authors
+# This file is distributed under the same license as the noxdd package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: noxdd 1.5.0\n"
+"Report-Msgid-Bugs-To: noxdd@googlegroups.com\n"
+"POT-Creation-Date: 2024-06-03 14:10+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../app/ui.js:69
+msgid ""
+"Running without HTTPS is not recommended, crashes or other issues are likely."
+msgstr ""
+
+#: ../app/ui.js:410
+msgid "Connecting..."
+msgstr ""
+
+#: ../app/ui.js:417
+msgid "Disconnecting..."
+msgstr ""
+
+#: ../app/ui.js:423
+msgid "Reconnecting..."
+msgstr ""
+
+#: ../app/ui.js:428
+msgid "Internal error"
+msgstr ""
+
+#: ../app/ui.js:1026
+msgid "Must set host"
+msgstr ""
+
+#: ../app/ui.js:1052
+msgid "Failed to connect to server: "
+msgstr ""
+
+#: ../app/ui.js:1118
+msgid "Connected (encrypted) to "
+msgstr ""
+
+#: ../app/ui.js:1120
+msgid "Connected (unencrypted) to "
+msgstr ""
+
+#: ../app/ui.js:1143
+msgid "Something went wrong, connection is closed"
+msgstr ""
+
+#: ../app/ui.js:1146
+msgid "Failed to connect to server"
+msgstr ""
+
+#: ../app/ui.js:1158
+msgid "Disconnected"
+msgstr ""
+
+#: ../app/ui.js:1173
+msgid "New connection has been rejected with reason: "
+msgstr ""
+
+#: ../app/ui.js:1176
+msgid "New connection has been rejected"
+msgstr ""
+
+#: ../app/ui.js:1242
+msgid "Credentials are required"
+msgstr ""
+
+#: ../xdd.html:55
+msgid "noxdd encountered an error:"
+msgstr ""
+
+#: ../xdd.html:65
+msgid "Hide/Show the control bar"
+msgstr ""
+
+#: ../xdd.html:74
+msgid "Drag"
+msgstr ""
+
+#: ../xdd.html:74
+msgid "Move/Drag Viewport"
+msgstr ""
+
+#: ../xdd.html:80
+msgid "Keyboard"
+msgstr ""
+
+#: ../xdd.html:80
+msgid "Show Keyboard"
+msgstr ""
+
+#: ../xdd.html:85
+msgid "Extra keys"
+msgstr ""
+
+#: ../xdd.html:85
+msgid "Show Extra Keys"
+msgstr ""
+
+#: ../xdd.html:90
+msgid "Ctrl"
+msgstr ""
+
+#: ../xdd.html:90
+msgid "Toggle Ctrl"
+msgstr ""
+
+#: ../xdd.html:93
+msgid "Alt"
+msgstr ""
+
+#: ../xdd.html:93
+msgid "Toggle Alt"
+msgstr ""
+
+#: ../xdd.html:96
+msgid "Toggle Windows"
+msgstr ""
+
+#: ../xdd.html:96
+msgid "Windows"
+msgstr ""
+
+#: ../xdd.html:99
+msgid "Send Tab"
+msgstr ""
+
+#: ../xdd.html:99
+msgid "Tab"
+msgstr ""
+
+#: ../xdd.html:102
+msgid "Esc"
+msgstr ""
+
+#: ../xdd.html:102
+msgid "Send Escape"
+msgstr ""
+
+#: ../xdd.html:105
+msgid "Ctrl+Alt+Del"
+msgstr ""
+
+#: ../xdd.html:105
+msgid "Send Ctrl-Alt-Del"
+msgstr ""
+
+#: ../xdd.html:112
+msgid "Shutdown/Reboot"
+msgstr ""
+
+#: ../xdd.html:112
+msgid "Shutdown/Reboot..."
+msgstr ""
+
+#: ../xdd.html:118
+msgid "Power"
+msgstr ""
+
+#: ../xdd.html:120
+msgid "Shutdown"
+msgstr ""
+
+#: ../xdd.html:121
+msgid "Reboot"
+msgstr ""
+
+#: ../xdd.html:122
+msgid "Reset"
+msgstr ""
+
+#: ../xdd.html:127 ../xdd.html:133
+msgid "Clipboard"
+msgstr ""
+
+#: ../xdd.html:135
+msgid "Edit clipboard content in the textarea below."
+msgstr ""
+
+#: ../xdd.html:143
+msgid "Full Screen"
+msgstr ""
+
+#: ../xdd.html:148 ../xdd.html:154
+msgid "Settings"
+msgstr ""
+
+#: ../xdd.html:158
+msgid "Shared Mode"
+msgstr ""
+
+#: ../xdd.html:161
+msgid "View Only"
+msgstr ""
+
+#: ../xdd.html:165
+msgid "Clip to Window"
+msgstr ""
+
+#: ../xdd.html:168
+msgid "Scaling Mode:"
+msgstr ""
+
+#: ../xdd.html:170
+msgid "None"
+msgstr ""
+
+#: ../xdd.html:171
+msgid "Local Scaling"
+msgstr ""
+
+#: ../xdd.html:172
+msgid "Remote Resizing"
+msgstr ""
+
+#: ../xdd.html:177
+msgid "Advanced"
+msgstr ""
+
+#: ../xdd.html:180
+msgid "Quality:"
+msgstr ""
+
+#: ../xdd.html:184
+msgid "Compression level:"
+msgstr ""
+
+#: ../xdd.html:189
+msgid "Repeater ID:"
+msgstr ""
+
+#: ../xdd.html:193
+msgid "WebSocket"
+msgstr ""
+
+#: ../xdd.html:196
+msgid "Encrypt"
+msgstr ""
+
+#: ../xdd.html:199
+msgid "Host:"
+msgstr ""
+
+#: ../xdd.html:203
+msgid "Port:"
+msgstr ""
+
+#: ../xdd.html:207
+msgid "Path:"
+msgstr ""
+
+#: ../xdd.html:214
+msgid "Automatic Reconnect"
+msgstr ""
+
+#: ../xdd.html:217
+msgid "Reconnect Delay (ms):"
+msgstr ""
+
+#: ../xdd.html:222
+msgid "Show Dot when No Cursor"
+msgstr ""
+
+#: ../xdd.html:227
+msgid "Logging:"
+msgstr ""
+
+#: ../xdd.html:236
+msgid "Version:"
+msgstr ""
+
+#: ../xdd.html:244
+msgid "Disconnect"
+msgstr ""
+
+#: ../xdd.html:267
+msgid "Connect"
+msgstr ""
+
+#: ../xdd.html:276
+msgid "Server identity"
+msgstr ""
+
+#: ../xdd.html:279
+msgid "The server has provided the following identifying information:"
+msgstr ""
+
+#: ../xdd.html:283
+msgid "Fingerprint:"
+msgstr ""
+
+#: ../xdd.html:286
+msgid ""
+"Please verify that the information is correct and press \"Approve\". "
+"Otherwise press \"Reject\"."
+msgstr ""
+
+#: ../xdd.html:291
+msgid "Approve"
+msgstr ""
+
+#: ../xdd.html:292
+msgid "Reject"
+msgstr ""
+
+#: ../xdd.html:300
+msgid "Credentials"
+msgstr ""
+
+#: ../xdd.html:304
+msgid "Username:"
+msgstr ""
+
+#: ../xdd.html:308
+msgid "Password:"
+msgstr ""
+
+#: ../xdd.html:312
+msgid "Send Credentials"
+msgstr ""
+
+#: ../xdd.html:321
+msgid "Cancel"
+msgstr ""

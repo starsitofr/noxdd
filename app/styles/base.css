@@ -1,0 +1,922 @@
+/*
+ * noxdd base CSS
+ * Copyright (C) 2019 The noxdd Authors
+ * noxdd is licensed under the MPL 2.0 (see LICENSE.txt)
+ * This file is licensed under the 2-Clause BSD license (see LICENSE.txt).
+ */
+
+/*
+ * Z index layers:
+ *
+ * 0: Main screen
+ * 10: Control bar
+ * 50: Transition blocker
+ * 60: Connection popups
+ * 100: Status bar
+ * ...
+ * 1000: Javascript crash
+ * ...
+ * 10000: Max (used for polyfills)
+ */
+
+/*
+ * State variables (set on :root):
+ *
+ * noxdd_loading: Page is still loading
+ * noxdd_connecting: Connecting to server
+ * noxdd_reconnecting: Re-establishing a connection
+ * noxdd_connected: Connected to server (most common state)
+ * noxdd_disconnecting: Disconnecting from server
+ */
+
+:root {
+  font-family: sans-serif;
+}
+
+body {
+  margin:0;
+  padding:0;
+  /*Background image with light grey curve.*/
+  background-color:#494949;
+  background-repeat:no-repeat;
+  background-position:right bottom;
+  height:100%;
+  touch-action: none;
+}
+
+html {
+  height:100%;
+}
+
+.noxdd_only_touch.noxdd_hidden {
+  display: none;
+}
+
+.noxdd_disabled {
+  color: rgb(128, 128, 128);
+}
+
+/* ----------------------------------------
+ * Spinner
+ * ----------------------------------------
+ */
+
+.noxdd_spinner {
+  position: relative;
+}
+.noxdd_spinner, .noxdd_spinner::before, .noxdd_spinner::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  box-shadow: -60px 10px 0 rgba(255, 255, 255, 0);
+  animation: noxdd_spinner 1.0s linear infinite;
+}
+.noxdd_spinner::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  animation-delay: -0.1s;
+}
+.noxdd_spinner::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation-delay: 0.1s;
+}
+@keyframes noxdd_spinner {
+  0% { box-shadow: -60px 10px 0 rgba(255, 255, 255, 0); width: 20px; }
+  25% { box-shadow: 20px 10px 0 rgba(255, 255, 255, 1); width: 10px; }
+  50% { box-shadow: 60px 10px 0 rgba(255, 255, 255, 0); width: 10px; }
+}
+
+/* ----------------------------------------
+ * WebKit centering hacks
+ * ----------------------------------------
+ */
+
+.noxdd_center {
+  /*
+   * This is a workaround because webkit misrenders transforms and
+   * uses non-integer coordinates, resulting in blurry content.
+   * Ideally we'd use "top: 50%; transform: translateY(-50%);" on
+   * the objects instead.
+   */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.noxdd_center > * {
+  pointer-events: auto;
+}
+.noxdd_vcenter {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none;
+}
+.noxdd_vcenter > * {
+  pointer-events: auto;
+}
+
+/* ----------------------------------------
+ * Layering
+ * ----------------------------------------
+ */
+
+.noxdd_connect_layer {
+  z-index: 60;
+}
+
+/* ----------------------------------------
+ * Fallback error
+ * ----------------------------------------
+ */
+
+#noxdd_fallback_error {
+  z-index: 1000;
+  visibility: hidden;
+  /* Put a dark background in front of everything but the error,
+     and don't let mouse events pass through */
+  background: rgba(0, 0, 0, 0.8);
+  pointer-events: all;
+}
+#noxdd_fallback_error.noxdd_open {
+  visibility: visible;
+}
+
+#noxdd_fallback_error > div {
+  max-width: calc(100vw - 30px - 30px);
+  max-height: calc(100vh - 30px - 30px);
+  overflow: auto;
+
+  padding: 15px;
+
+  transition: 0.5s ease-in-out;
+
+  transform: translateY(-50px);
+  opacity: 0;
+
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+
+  border-radius: 10px;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
+  background: rgba(200,55,55,0.8);
+}
+#noxdd_fallback_error.noxdd_open > div {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#noxdd_fallback_errormsg {
+  font-weight: normal;
+}
+
+#noxdd_fallback_errormsg .noxdd_message {
+  display: inline-block;
+  text-align: left;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+#noxdd_fallback_error .noxdd_location {
+  font-style: italic;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#noxdd_fallback_error .noxdd_stack {
+  padding: 10px;
+  margin: 10px;
+  font-size: 0.8em;
+  text-align: left;
+  font-family: monospace;
+  white-space: pre;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+
+/* ----------------------------------------
+ * Control Bar
+ * ----------------------------------------
+ */
+
+#noxdd_control_bar_anchor {
+  /* The anchor is needed to get z-stacking to work */
+  position: fixed;
+  z-index: 10;
+
+  transition: 0.5s ease-in-out;
+
+  /* Edge misrenders animations wihthout this */
+  transform: translateX(0);
+}
+:root.noxdd_connected #noxdd_control_bar_anchor.noxdd_idle {
+  opacity: 0.8;
+}
+#noxdd_control_bar_anchor.noxdd_right {
+  left: auto;
+  right: 0;
+}
+
+#noxdd_control_bar {
+  position: relative;
+  left: -100%;
+
+  transition: 0.5s ease-in-out;
+
+  background-color: rgb(110, 132, 163);
+  border-radius: 0 10px 10px 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none; /* Disable iOS image long-press popup */
+}
+#noxdd_control_bar.noxdd_open {
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
+  left: 0;
+}
+#noxdd_control_bar::before {
+  /* This extra element is to get a proper shadow */
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 30px;
+  left: -30px;
+  transition: box-shadow 0.5s ease-in-out;
+}
+#noxdd_control_bar.noxdd_open::before {
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
+}
+.noxdd_right #noxdd_control_bar {
+  left: 100%;
+  border-radius: 10px 0 0 10px;
+}
+.noxdd_right #noxdd_control_bar.noxdd_open {
+  left: 0;
+}
+.noxdd_right #noxdd_control_bar::before {
+  visibility: hidden;
+}
+
+#noxdd_control_bar_handle {
+  position: absolute;
+  left: -15px;
+  top: 0;
+  transform: translateY(35px);
+  width: calc(100% + 30px);
+  height: 50px;
+  z-index: -1;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(83, 99, 122);
+  background-image: url("../images/handle_bg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+#noxdd_control_bar_handle:after {
+  content: "";
+  transition: transform 0.5s ease-in-out;
+  background: url("../images/handle.svg");
+  position: absolute;
+  top: 22px; /* (50px-6px)/2 */
+  right: 5px;
+  width: 5px;
+  height: 6px;
+}
+#noxdd_control_bar.noxdd_open #noxdd_control_bar_handle:after {
+  transform: translateX(1px) rotate(180deg);
+}
+:root:not(.noxdd_connected) #noxdd_control_bar_handle {
+  display: none;
+}
+.noxdd_right #noxdd_control_bar_handle {
+  background-position: left;
+}
+.noxdd_right #noxdd_control_bar_handle:after {
+  left: 5px;
+  right: 0;
+  transform: translateX(1px) rotate(180deg);
+}
+.noxdd_right #noxdd_control_bar.noxdd_open #noxdd_control_bar_handle:after {
+  transform: none;
+}
+/* Larger touch area for the handle, used when a touch screen is available */
+#noxdd_control_bar_handle div {
+  position: absolute;
+  right: -35px;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  display: none;
+}
+@media (any-pointer: coarse) {
+  #noxdd_control_bar_handle div {
+    display: initial;
+  }
+}
+.noxdd_right #noxdd_control_bar_handle div {
+  left: -35px;
+  right: auto;
+}
+
+#noxdd_control_bar > .noxdd_scroll {
+  max-height: 100vh; /* Chrome is buggy with 100% */
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 10px;
+}
+
+#noxdd_control_bar > .noxdd_scroll > * {
+  display: block;
+  margin: 10px auto;
+}
+
+/* Control bar hint */
+#noxdd_hint_anchor {
+  position: fixed;
+  right: -50px;
+  left: auto;
+}
+#noxdd_control_bar_anchor.noxdd_right + #noxdd_hint_anchor {
+  left: -50px;
+  right: auto;
+}
+#noxdd_control_bar_hint {
+  position: relative;
+  transform: scale(0);
+  width: 100px;
+  height: 50%;
+  max-height: 600px;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  background: transparent;
+  box-shadow: 0 0 10px black, inset 0 0 10px 10px rgba(110, 132, 163, 0.8);
+  border-radius: 10px;
+  transition-delay: 0s;
+}
+#noxdd_control_bar_hint.noxdd_active {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
+  transform: scale(1);
+}
+#noxdd_control_bar_hint.noxdd_notransition {
+  transition: none !important;
+}
+
+/* Control bar buttons */
+#noxdd_control_bar .noxdd_button {
+  padding: 4px 4px;
+  vertical-align: middle;
+  border:1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background-color: transparent;
+  background-image: unset; /* we don't want the gradiant from input.css */
+}
+#noxdd_control_bar .noxdd_button.noxdd_selected {
+  border-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#noxdd_control_bar .noxdd_button.noxdd_selected:not(:disabled):hover {
+  border-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#noxdd_control_bar .noxdd_button:not(:disabled):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#noxdd_control_bar .noxdd_button:not(:disabled):active {
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+#noxdd_control_bar .noxdd_button.noxdd_hidden {
+  display: none !important;
+}
+
+/* Android browsers don't properly update hover state if touch events are
+ * intercepted, like they are when clicking on the remote screen. */
+@media (any-pointer: coarse) {
+  #noxdd_control_bar .noxdd_button:not(:disabled):hover {
+    background-color: transparent;
+  }
+  #noxdd_control_bar .noxdd_button.noxdd_selected:not(:disabled):hover {
+    border-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+
+/* Panels */
+.noxdd_panel {
+  transform: translateX(25px);
+
+  transition: 0.5s ease-in-out;
+
+  box-sizing: border-box; /* so max-width don't have to care about padding */
+  max-width: calc(100vw - 75px - 25px); /* minus left and right margins */
+  max-height: 100vh; /* Chrome is buggy with 100% */
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  visibility: hidden;
+  opacity: 0;
+
+  padding: 15px;
+
+  background: #fff;
+  border-radius: 10px;
+  color: #000;
+  border: 2px solid #E0E0E0;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
+}
+.noxdd_panel.noxdd_open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(75px);
+}
+.noxdd_right .noxdd_vcenter {
+  left: auto;
+  right: 0;
+}
+.noxdd_right .noxdd_panel {
+  transform: translateX(-25px);
+}
+.noxdd_right .noxdd_panel.noxdd_open {
+  transform: translateX(-75px);
+}
+
+.noxdd_panel > * {
+  display: block;
+  margin: 10px auto;
+}
+.noxdd_panel > *:first-child {
+  margin-top: 0 !important;
+}
+.noxdd_panel > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.noxdd_panel hr {
+  border: none;
+  border-top: 1px solid rgb(192, 192, 192);
+}
+
+.noxdd_panel label {
+  display: block;
+  white-space: nowrap;
+  margin: 5px;
+}
+
+.noxdd_panel li {
+  margin: 5px;
+}
+
+.noxdd_panel .noxdd_heading {
+  background-color: rgb(110, 132, 163);
+  border-radius: 5px;
+  padding: 5px;
+  /* Compensate for padding in image */
+  padding-right: 8px;
+  color: white;
+  font-size: 20px;
+  white-space: nowrap;
+}
+.noxdd_panel .noxdd_heading img {
+  vertical-align: bottom;
+}
+
+.noxdd_submit {
+  float: right;
+}
+
+/* Expanders */
+.noxdd_expander {
+  cursor: pointer;
+}
+.noxdd_expander::before {
+  content: url("../images/expander.svg");
+  display: inline-block;
+  margin-right: 5px;
+  transition: 0.2s ease-in-out;
+}
+.noxdd_expander.noxdd_open::before {
+  transform: rotateZ(90deg);
+}
+.noxdd_expander ~ * {
+  margin: 5px;
+  margin-left: 10px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+.noxdd_expander:not(.noxdd_open) ~ * {
+  display: none;
+}
+
+/* Control bar content */
+
+#noxdd_control_bar .noxdd_logo {
+  font-size: 13px;
+}
+
+.noxdd_logo + hr {
+    /* Remove all but top border */
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+:root:not(.noxdd_connected) #noxdd_view_drag_button {
+  display: none;
+}
+
+/* noxdd Touch Device only buttons */
+:root:not(.noxdd_connected) #noxdd_mobile_buttons {
+  display: none;
+}
+@media not all and (any-pointer: coarse) {
+  /* FIXME: The button for the virtual keyboard is the only button in this
+            group of "mobile buttons". It is bad to assume that no touch
+            devices have physical keyboards available. Hopefully we can get
+            a media query for this:
+            https://github.com/w3c/csswg-drafts/issues/3871 */
+  :root.noxdd_connected #noxdd_mobile_buttons {
+    display: none;
+  }
+}
+
+/* Extra manual keys */
+:root:not(.noxdd_connected) #noxdd_toggle_extra_keys_button {
+  display: none;
+}
+
+#noxdd_modifiers {
+  background-color: rgb(92, 92, 92);
+  border: none;
+  padding: 10px;
+}
+
+/* Shutdown/Reboot */
+:root:not(.noxdd_connected) #noxdd_power_button {
+  display: none;
+}
+#noxdd_power {
+}
+#noxdd_power_buttons {
+  display: none;
+}
+
+#noxdd_power input[type=button] {
+  width: 100%;
+}
+
+/* Clipboard */
+:root:not(.noxdd_connected) #noxdd_clipboard_button {
+  display: none;
+}
+#noxdd_clipboard_text {
+  width: 360px;
+  min-width: 150px;
+  height: 160px;
+  min-height: 70px;
+
+  box-sizing: border-box;
+  max-width: 100%;
+  /* minus approximate height of title, height of subtitle, and margin */
+  max-height: calc(100vh - 10em - 25px);
+}
+
+/* Settings */
+#noxdd_settings {
+}
+#noxdd_settings ul {
+  list-style: none;
+  padding: 0px;
+}
+#noxdd_setting_port {
+  width: 80px;
+}
+#noxdd_setting_path {
+  width: 100px;
+}
+
+/* Version */
+
+.noxdd_version_wrapper {
+  font-size: small;
+}
+
+.noxdd_version {
+  margin-left: 1rem;
+}
+
+/* Connection Controls */
+:root:not(.noxdd_connected) #noxdd_disconnect_button {
+  display: none;
+}
+
+/* ----------------------------------------
+ * Status Dialog
+ * ----------------------------------------
+ */
+
+#noxdd_status {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transform: translateY(-100%);
+
+  cursor: pointer;
+
+  transition: 0.5s ease-in-out;
+
+  visibility: hidden;
+  opacity: 0;
+
+  padding: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+  line-height: 1.6;
+  word-wrap: break-word;
+  color: #fff;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+}
+#noxdd_status.noxdd_open {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+#noxdd_status::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+#noxdd_status.noxdd_status_normal {
+  background: rgba(128,128,128,0.9);
+}
+#noxdd_status.noxdd_status_normal::before {
+  content: url("../images/info.svg") " ";
+}
+#noxdd_status.noxdd_status_error {
+  background: rgba(200,55,55,0.9);
+}
+#noxdd_status.noxdd_status_error::before {
+  content: url("../images/error.svg") " ";
+}
+#noxdd_status.noxdd_status_warn {
+  background: rgba(180,180,30,0.9);
+}
+#noxdd_status.noxdd_status_warn::before {
+  content: url("../images/warning.svg") " ";
+}
+
+/* ----------------------------------------
+ * Connect Dialog
+ * ----------------------------------------
+ */
+
+#noxdd_connect_dlg {
+  transition: 0.5s ease-in-out;
+
+  transform: scale(0, 0);
+  visibility: hidden;
+  opacity: 0;
+}
+#noxdd_connect_dlg.noxdd_open {
+  transform: scale(1, 1);
+  visibility: visible;
+  opacity: 1;
+}
+#noxdd_connect_dlg .noxdd_logo {
+  transition: 0.5s ease-in-out;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  font-size: 80px;
+  text-align: center;
+
+  border-radius: 5px;
+}
+@media (max-width: 440px) {
+  #noxdd_connect_dlg {
+    max-width: calc(100vw - 100px);
+  }
+  #noxdd_connect_dlg .noxdd_logo {
+    font-size: calc(25vw - 30px);
+  }
+}
+#noxdd_connect_dlg div {
+  padding: 12px;
+
+  background-color: rgb(110, 132, 163);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 20px;
+
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.5);
+}
+#noxdd_connect_button {
+  width: 100%;
+  padding: 5px 30px;
+
+  cursor: pointer;
+
+  border-color: rgb(83, 99, 122);
+  border-radius: 5px;
+
+  background: linear-gradient(to top, rgb(110, 132, 163), rgb(99, 119, 147));
+  color: white;
+
+  /* This avoids it jumping around when :active */
+  vertical-align: middle;
+}
+#noxdd_connect_button:hover {
+  background: linear-gradient(to top, rgb(110, 132, 163), rgb(105, 125, 155));
+}
+
+#noxdd_connect_button img {
+  vertical-align: bottom;
+  height: 1.3em;
+}
+
+/* ----------------------------------------
+ * Server verification Dialog
+ * ----------------------------------------
+ */
+
+#noxdd_verify_server_dlg {
+  position: relative;
+
+  transform: translateY(-50px);
+}
+#noxdd_verify_server_dlg.noxdd_open {
+  transform: translateY(0);
+}
+#noxdd_fingerprint_block {
+  margin: 10px;
+}
+
+/* ----------------------------------------
+ * Password Dialog
+ * ----------------------------------------
+ */
+
+#noxdd_credentials_dlg {
+  position: relative;
+
+  transform: translateY(-50px);
+}
+#noxdd_credentials_dlg.noxdd_open {
+  transform: translateY(0);
+}
+#noxdd_username_block.noxdd_hidden,
+#noxdd_password_block.noxdd_hidden {
+  display: none;
+}
+
+
+/* ----------------------------------------
+ * Main Area
+ * ----------------------------------------
+ */
+
+/* Transition screen */
+#noxdd_transition {
+  transition: 0.5s ease-in-out;
+
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+:root.noxdd_loading #noxdd_transition,
+:root.noxdd_connecting #noxdd_transition,
+:root.noxdd_disconnecting #noxdd_transition,
+:root.noxdd_reconnecting #noxdd_transition {
+  opacity: 1;
+  visibility: visible;
+}
+:root:not(.noxdd_reconnecting) #noxdd_cancel_reconnect_button {
+  display: none;
+}
+#noxdd_transition_text {
+  font-size: 1.5em;
+}
+
+/* Main container */
+#noxdd_container {
+  width: 100%;
+  height: 100%;
+  background-color: #313131;
+  border-bottom-right-radius: 800px 600px;
+  /*border-top-left-radius: 800px 600px;*/
+
+  /* If selection isn't disabled, long-pressing stuff in the sidebar
+     can accidentally select the container or the canvas. This can
+     happen when attempting to move the handle. */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#noxdd_keyboardinput {
+  width: 1px;
+  height: 1px;
+  background-color: #fff;
+  color: #fff;
+  border: 0;
+  position: absolute;
+  left: -40px;
+  z-index: -1;
+  ime-mode: disabled;
+}
+
+/*Default noxdd logo.*/
+/* From: http://fonts.googleapis.com/css?family=Orbitron:700 */
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 700;
+  src: local('?'), url('Orbitron700.woff') format('woff'),
+                   url('Orbitron700.ttf') format('truetype');
+}
+
+.noxdd_logo {
+  color:yellow;
+  font-family: 'Orbitron', 'OrbitronTTF', sans-serif;
+  line-height: 0.9;
+  text-shadow: 0.1em 0.1em 0 black;
+}
+.noxdd_logo span{
+  color:green;
+}
+
+#noxdd_bell {
+  display: none;
+}
+
+/* ----------------------------------------
+ * Media sizing
+ * ----------------------------------------
+ */
+
+@media screen and (max-width: 640px){
+  #noxdd_logo {
+    font-size: 150px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  #noxdd_logo {
+    font-size: 110px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #noxdd_logo {
+    font-size: 90px;
+  }
+}

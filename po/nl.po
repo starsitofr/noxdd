@@ -1,0 +1,322 @@
+# Dutch translations for noxdd package
+# Nederlandse vertalingen voor het pakket noxdd.
+# Copyright (C) 2018 The noxdd Authors
+# This file is distributed under the same license as the noxdd package.
+# Loek Janssen <loekjanssen@gmail.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: noxdd 1.1.0\n"
+"Report-Msgid-Bugs-To: noxdd@googlegroups.com\n"
+"POT-Creation-Date: 2019-04-09 11:06+0100\n"
+"PO-Revision-Date: 2019-04-09 17:17+0100\n"
+"Last-Translator: Arend Lapere <arend.lapere@gmail.com>\n"
+"Language-Team: none\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../app/ui.js:383
+msgid "Connecting..."
+msgstr "Verbinden..."
+
+#: ../app/ui.js:390
+msgid "Disconnecting..."
+msgstr "Verbinding verbreken..."
+
+#: ../app/ui.js:396
+msgid "Reconnecting..."
+msgstr "Opnieuw verbinding maken..."
+
+#: ../app/ui.js:401
+msgid "Internal error"
+msgstr "Interne fout"
+
+#: ../app/ui.js:991
+msgid "Must set host"
+msgstr "Host moeten worden ingesteld"
+
+#: ../app/ui.js:1073
+msgid "Connected (encrypted) to "
+msgstr "Verbonden (versleuteld) met "
+
+#: ../app/ui.js:1075
+msgid "Connected (unencrypted) to "
+msgstr "Verbonden (onversleuteld) met "
+
+#: ../app/ui.js:1098
+msgid "Something went wrong, connection is closed"
+msgstr "Er iets fout gelopen, verbinding werd verbroken"
+
+#: ../app/ui.js:1101
+msgid "Failed to connect to server"
+msgstr "Verbinding maken met server is mislukt"
+
+#: ../app/ui.js:1111
+msgid "Disconnected"
+msgstr "Verbinding verbroken"
+
+#: ../app/ui.js:1124
+msgid "New connection has been rejected with reason: "
+msgstr "Nieuwe verbinding is geweigerd omwille van de volgende reden: "
+
+#: ../app/ui.js:1127
+msgid "New connection has been rejected"
+msgstr "Nieuwe verbinding is geweigerd"
+
+#: ../app/ui.js:1147
+msgid "Password is required"
+msgstr "Wachtwoord is vereist"
+
+#: ../xdd.html:80
+msgid "noxdd encountered an error:"
+msgstr "noxdd heeft een fout bemerkt:"
+
+#: ../xdd.html:90
+msgid "Hide/Show the control bar"
+msgstr "Verberg/Toon de bedieningsbalk"
+
+#: ../xdd.html:97
+msgid "Move/Drag Viewport"
+msgstr "Verplaats/Versleep Kijkvenster"
+
+#: ../xdd.html:97
+msgid "viewport drag"
+msgstr "kijkvenster slepen"
+
+#: ../xdd.html:103 ../xdd.html:106 ../xdd.html:109 ../xdd.html:112
+msgid "Active Mouse Button"
+msgstr "Actieve Muisknop"
+
+#: ../xdd.html:103
+msgid "No mousebutton"
+msgstr "Geen muisknop"
+
+#: ../xdd.html:106
+msgid "Left mousebutton"
+msgstr "Linker muisknop"
+
+#: ../xdd.html:109
+msgid "Middle mousebutton"
+msgstr "Middelste muisknop"
+
+#: ../xdd.html:112
+msgid "Right mousebutton"
+msgstr "Rechter muisknop"
+
+#: ../xdd.html:115
+msgid "Keyboard"
+msgstr "Toetsenbord"
+
+#: ../xdd.html:115
+msgid "Show Keyboard"
+msgstr "Toon Toetsenbord"
+
+#: ../xdd.html:121
+msgid "Extra keys"
+msgstr "Extra toetsen"
+
+#: ../xdd.html:121
+msgid "Show Extra Keys"
+msgstr "Toon Extra Toetsen"
+
+#: ../xdd.html:126
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: ../xdd.html:126
+msgid "Toggle Ctrl"
+msgstr "Ctrl omschakelen"
+
+#: ../xdd.html:129
+msgid "Alt"
+msgstr "Alt"
+
+#: ../xdd.html:129
+msgid "Toggle Alt"
+msgstr "Alt omschakelen"
+
+#: ../xdd.html:132
+msgid "Toggle Windows"
+msgstr "Windows omschakelen"
+
+#: ../xdd.html:132
+msgid "Windows"
+msgstr "Windows"
+
+#: ../xdd.html:135
+msgid "Send Tab"
+msgstr "Tab Sturen"
+
+#: ../xdd.html:135
+msgid "Tab"
+msgstr "Tab"
+
+#: ../xdd.html:138
+msgid "Esc"
+msgstr "Esc"
+
+#: ../xdd.html:138
+msgid "Send Escape"
+msgstr "Escape Sturen"
+
+#: ../xdd.html:141
+msgid "Ctrl+Alt+Del"
+msgstr "Ctrl-Alt-Del"
+
+#: ../xdd.html:141
+msgid "Send Ctrl-Alt-Del"
+msgstr "Ctrl-Alt-Del Sturen"
+
+#: ../xdd.html:149
+msgid "Shutdown/Reboot"
+msgstr "Uitschakelen/Herstarten"
+
+#: ../xdd.html:149
+msgid "Shutdown/Reboot..."
+msgstr "Uitschakelen/Herstarten..."
+
+#: ../xdd.html:155
+msgid "Power"
+msgstr "Systeem"
+
+#: ../xdd.html:157
+msgid "Shutdown"
+msgstr "Uitschakelen"
+
+#: ../xdd.html:158
+msgid "Reboot"
+msgstr "Herstarten"
+
+#: ../xdd.html:159
+msgid "Reset"
+msgstr "Resetten"
+
+#: ../xdd.html:164 ../xdd.html:170
+msgid "Clipboard"
+msgstr "Klembord"
+
+#: ../xdd.html:174
+msgid "Clear"
+msgstr "Wissen"
+
+#: ../xdd.html:180
+msgid "Fullscreen"
+msgstr "Volledig Scherm"
+
+#: ../xdd.html:185 ../xdd.html:192
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../xdd.html:195
+msgid "Shared Mode"
+msgstr "Gedeelde Modus"
+
+#: ../xdd.html:198
+msgid "View Only"
+msgstr "Alleen Kijken"
+
+#: ../xdd.html:202
+msgid "Clip to Window"
+msgstr "Randen buiten venster afsnijden"
+
+#: ../xdd.html:205
+msgid "Scaling Mode:"
+msgstr "Schaalmodus:"
+
+#: ../xdd.html:207
+msgid "None"
+msgstr "Geen"
+
+#: ../xdd.html:208
+msgid "Local Scaling"
+msgstr "Lokaal Schalen"
+
+#: ../xdd.html:209
+msgid "Remote Resizing"
+msgstr "Op Afstand Formaat Wijzigen"
+
+#: ../xdd.html:214
+msgid "Advanced"
+msgstr "Geavanceerd"
+
+#: ../xdd.html:217
+msgid "Repeater ID:"
+msgstr "Repeater ID:"
+
+#: ../xdd.html:221
+msgid "WebSocket"
+msgstr "WebSocket"
+
+#: ../xdd.html:224
+msgid "Encrypt"
+msgstr "Versleutelen"
+
+#: ../xdd.html:227
+msgid "Host:"
+msgstr "Host:"
+
+#: ../xdd.html:231
+msgid "Port:"
+msgstr "Poort:"
+
+#: ../xdd.html:235
+msgid "Path:"
+msgstr "Pad:"
+
+#: ../xdd.html:242
+msgid "Automatic Reconnect"
+msgstr "Automatisch Opnieuw Verbinden"
+
+#: ../xdd.html:245
+msgid "Reconnect Delay (ms):"
+msgstr "Vertraging voor Opnieuw Verbinden (ms):"
+
+#: ../xdd.html:250
+msgid "Show Dot when No Cursor"
+msgstr "Geef stip weer indien geen cursor"
+
+#: ../xdd.html:255
+msgid "Logging:"
+msgstr "Logmeldingen:"
+
+#: ../xdd.html:267
+msgid "Disconnect"
+msgstr "Verbinding verbreken"
+
+#: ../xdd.html:286
+msgid "Connect"
+msgstr "Verbinden"
+
+#: ../xdd.html:296
+msgid "Password:"
+msgstr "Wachtwoord:"
+
+#: ../xdd.html:300
+msgid "Send Password"
+msgstr "Verzend Wachtwoord:"
+
+#: ../xdd.html:310
+msgid "Cancel"
+msgstr "Annuleren"
+
+#~ msgid "Disconnect timeout"
+#~ msgstr "Timeout tijdens verbreken van verbinding"
+
+#~ msgid "Local Downscaling"
+#~ msgstr "Lokaal Neerschalen"
+
+#~ msgid "Local Cursor"
+#~ msgstr "Lokale Cursor"
+
+#~ msgid "Canvas not supported."
+#~ msgstr "Canvas wordt niet ondersteund."
+
+#~ msgid ""
+#~ "Forcing clipping mode since scrollbars aren't supported by IE in "
+#~ "fullscreen"
+#~ msgstr ""
+#~ "''Clipping mode' ingeschakeld, omdat schuifbalken in volledige-scherm-"
+#~ "modus in IE niet worden ondersteund"

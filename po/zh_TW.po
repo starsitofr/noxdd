@@ -1,0 +1,285 @@
+# Traditional Chinese translations for noxdd package.
+# Copyright (C) 2018 The noxdd Authors
+# This file is distributed under the same license as the noxdd package.
+# Peter Dave Hello <hsu@peterdavehello.org>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: noxdd 1.0.0-testing.2\n"
+"Report-Msgid-Bugs-To: noxdd@googlegroups.com\n"
+"POT-Creation-Date: 2018-01-10 00:53+0800\n"
+"PO-Revision-Date: 2018-01-10 01:33+0800\n"
+"Last-Translator: Peter Dave Hello <hsu@peterdavehello.org>\n"
+"Language-Team: Peter Dave Hello <hsu@peterdavehello.org>\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../app/ui.js:395
+msgid "Connecting..."
+msgstr "連線中..."
+
+#: ../app/ui.js:402
+msgid "Disconnecting..."
+msgstr "正在中斷連線..."
+
+#: ../app/ui.js:408
+msgid "Reconnecting..."
+msgstr "重新連線中..."
+
+#: ../app/ui.js:413
+msgid "Internal error"
+msgstr "內部錯誤"
+
+#: ../app/ui.js:1015
+msgid "Must set host"
+msgstr "請提供主機資訊"
+
+#: ../app/ui.js:1097
+msgid "Connected (encrypted) to "
+msgstr "已加密連線到"
+
+#: ../app/ui.js:1099
+msgid "Connected (unencrypted) to "
+msgstr "未加密連線到"
+
+#: ../app/ui.js:1120
+msgid "Something went wrong, connection is closed"
+msgstr "發生錯誤，連線已關閉"
+
+#: ../app/ui.js:1123
+msgid "Failed to connect to server"
+msgstr "無法連線到伺服器"
+
+#: ../app/ui.js:1133
+msgid "Disconnected"
+msgstr "連線已中斷"
+
+#: ../app/ui.js:1146
+msgid "New connection has been rejected with reason: "
+msgstr "連線被拒絕，原因："
+
+#: ../app/ui.js:1149
+msgid "New connection has been rejected"
+msgstr "連線被拒絕"
+
+#: ../app/ui.js:1170
+msgid "Password is required"
+msgstr "請提供密碼"
+
+#: ../xdd.html:89
+msgid "noxdd encountered an error:"
+msgstr "noxdd 遇到一個錯誤："
+
+#: ../xdd.html:99
+msgid "Hide/Show the control bar"
+msgstr "顯示/隱藏控制列"
+
+#: ../xdd.html:106
+msgid "Move/Drag Viewport"
+msgstr "拖放顯示範圍"
+
+#: ../xdd.html:106
+msgid "viewport drag"
+msgstr "顯示範圍拖放"
+
+#: ../xdd.html:112 ../xdd.html:115 ../xdd.html:118 ../xdd.html:121
+msgid "Active Mouse Button"
+msgstr "啟用滑鼠按鍵"
+
+#: ../xdd.html:112
+msgid "No mousebutton"
+msgstr "無滑鼠按鍵"
+
+#: ../xdd.html:115
+msgid "Left mousebutton"
+msgstr "滑鼠左鍵"
+
+#: ../xdd.html:118
+msgid "Middle mousebutton"
+msgstr "滑鼠中鍵"
+
+#: ../xdd.html:121
+msgid "Right mousebutton"
+msgstr "滑鼠右鍵"
+
+#: ../xdd.html:124
+msgid "Keyboard"
+msgstr "鍵盤"
+
+#: ../xdd.html:124
+msgid "Show Keyboard"
+msgstr "顯示鍵盤"
+
+#: ../xdd.html:131
+msgid "Extra keys"
+msgstr "額外按鍵"
+
+#: ../xdd.html:131
+msgid "Show Extra Keys"
+msgstr "顯示額外按鍵"
+
+#: ../xdd.html:136
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: ../xdd.html:136
+msgid "Toggle Ctrl"
+msgstr "切換 Ctrl"
+
+#: ../xdd.html:139
+msgid "Alt"
+msgstr "Alt"
+
+#: ../xdd.html:139
+msgid "Toggle Alt"
+msgstr "切換 Alt"
+
+#: ../xdd.html:142
+msgid "Send Tab"
+msgstr "送出 Tab 鍵"
+
+#: ../xdd.html:142
+msgid "Tab"
+msgstr "Tab"
+
+#: ../xdd.html:145
+msgid "Esc"
+msgstr "Esc"
+
+#: ../xdd.html:145
+msgid "Send Escape"
+msgstr "送出 Escape 鍵"
+
+#: ../xdd.html:148
+msgid "Ctrl+Alt+Del"
+msgstr "Ctrl-Alt-Del"
+
+#: ../xdd.html:148
+msgid "Send Ctrl-Alt-Del"
+msgstr "送出 Ctrl-Alt-Del 快捷鍵"
+
+#: ../xdd.html:156
+msgid "Shutdown/Reboot"
+msgstr "關機/重新啟動"
+
+#: ../xdd.html:156
+msgid "Shutdown/Reboot..."
+msgstr "關機/重新啟動..."
+
+#: ../xdd.html:162
+msgid "Power"
+msgstr "電源"
+
+#: ../xdd.html:164
+msgid "Shutdown"
+msgstr "關機"
+
+#: ../xdd.html:165
+msgid "Reboot"
+msgstr "重新啟動"
+
+#: ../xdd.html:166
+msgid "Reset"
+msgstr "重設"
+
+#: ../xdd.html:171 ../xdd.html:177
+msgid "Clipboard"
+msgstr "剪貼簿"
+
+#: ../xdd.html:181
+msgid "Clear"
+msgstr "清除"
+
+#: ../xdd.html:187
+msgid "Fullscreen"
+msgstr "全螢幕"
+
+#: ../xdd.html:192 ../xdd.html:199
+msgid "Settings"
+msgstr "設定"
+
+#: ../xdd.html:202
+msgid "Shared Mode"
+msgstr "分享模式"
+
+#: ../xdd.html:205
+msgid "View Only"
+msgstr "僅檢視"
+
+#: ../xdd.html:209
+msgid "Clip to Window"
+msgstr "限制/裁切視窗大小"
+
+#: ../xdd.html:212
+msgid "Scaling Mode:"
+msgstr "縮放模式："
+
+#: ../xdd.html:214
+msgid "None"
+msgstr "無"
+
+#: ../xdd.html:215
+msgid "Local Scaling"
+msgstr "本機縮放"
+
+#: ../xdd.html:216
+msgid "Remote Resizing"
+msgstr "遠端調整大小"
+
+#: ../xdd.html:221
+msgid "Advanced"
+msgstr "進階"
+
+#: ../xdd.html:224
+msgid "Repeater ID:"
+msgstr "中繼站 ID"
+
+#: ../xdd.html:228
+msgid "WebSocket"
+msgstr "WebSocket"
+
+#: ../xdd.html:231
+msgid "Encrypt"
+msgstr "加密"
+
+#: ../xdd.html:234
+msgid "Host:"
+msgstr "主機："
+
+#: ../xdd.html:238
+msgid "Port:"
+msgstr "連接埠："
+
+#: ../xdd.html:242
+msgid "Path:"
+msgstr "路徑："
+
+#: ../xdd.html:249
+msgid "Automatic Reconnect"
+msgstr "自動重新連線"
+
+#: ../xdd.html:252
+msgid "Reconnect Delay (ms):"
+msgstr "重新連線間隔 (ms)："
+
+#: ../xdd.html:258
+msgid "Logging:"
+msgstr "日誌級別："
+
+#: ../xdd.html:270
+msgid "Disconnect"
+msgstr "中斷連線"
+
+#: ../xdd.html:289
+msgid "Connect"
+msgstr "連線"
+
+#: ../xdd.html:299
+msgid "Password:"
+msgstr "密碼："
+
+#: ../xdd.html:313
+msgid "Cancel"
+msgstr "取消"

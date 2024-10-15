@@ -1,0 +1,284 @@
+# Spanish translations for noxdd package
+# Traducciones al español para el paquete noxdd.
+# Copyright (C) 2018 The noxdd Authors
+# This file is distributed under the same license as the noxdd package.
+# Juanjo Diaz <juanjo.diazmo@gmail.com>, 2018.
+# Adrian Scillato <ascillato@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: noxdd 1.0.0-testing.2\n"
+"Report-Msgid-Bugs-To: noxdd@googlegroups.com\n"
+"POT-Creation-Date: 2017-10-06 10:07+0200\n"
+"PO-Revision-Date: 2021-04-23 12:00-0300\n"
+"Last-Translator: Adrian Scillato <ascillato@gmail.com>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../app/ui.js:430
+msgid "Connecting..."
+msgstr "Conectando..."
+
+#: ../app/ui.js:438
+msgid "Connected (encrypted) to "
+msgstr "Conectado (con encriptación) a"
+
+#: ../app/ui.js:440
+msgid "Connected (unencrypted) to "
+msgstr "Conectado (sin encriptación) a"
+
+#: ../app/ui.js:446
+msgid "Disconnecting..."
+msgstr "Desconectando..."
+
+#: ../app/ui.js:450
+msgid "Disconnected"
+msgstr "Desconectado"
+
+#: ../app/ui.js:1052 ../core/rfb.js:248
+msgid "Must set host"
+msgstr "Se debe configurar el host"
+
+#: ../app/ui.js:1101
+msgid "Reconnecting..."
+msgstr "Reconectando..."
+
+#: ../app/ui.js:1140
+msgid "Password is required"
+msgstr "La contraseña es obligatoria"
+
+#: ../core/rfb.js:548
+msgid "Disconnect timeout"
+msgstr "Tiempo de desconexión agotado"
+
+#: ../xdd.html:89
+msgid "noxdd encountered an error:"
+msgstr "noxdd ha encontrado un error:"
+
+#: ../xdd.html:99
+msgid "Hide/Show the control bar"
+msgstr "Ocultar/Mostrar la barra de control"
+
+#: ../xdd.html:106
+msgid "Move/Drag Viewport"
+msgstr "Mover/Arrastrar la ventana"
+
+#: ../xdd.html:106
+msgid "viewport drag"
+msgstr "Arrastrar la ventana"
+
+#: ../xdd.html:112 ../xdd.html:115 ../xdd.html:118 ../xdd.html:121
+msgid "Active Mouse Button"
+msgstr "Botón activo del ratón"
+
+#: ../xdd.html:112
+msgid "No mousebutton"
+msgstr "Ningún botón del ratón"
+
+#: ../xdd.html:115
+msgid "Left mousebutton"
+msgstr "Botón izquierdo del ratón"
+
+#: ../xdd.html:118
+msgid "Middle mousebutton"
+msgstr "Botón central del ratón"
+
+#: ../xdd.html:121
+msgid "Right mousebutton"
+msgstr "Botón derecho del ratón"
+
+#: ../xdd.html:124
+msgid "Keyboard"
+msgstr "Teclado"
+
+#: ../xdd.html:124
+msgid "Show Keyboard"
+msgstr "Mostrar teclado"
+
+#: ../xdd.html:131
+msgid "Extra keys"
+msgstr "Teclas adicionales"
+
+#: ../xdd.html:131
+msgid "Show Extra Keys"
+msgstr "Mostrar Teclas Adicionales"
+
+#: ../xdd.html:136
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: ../xdd.html:136
+msgid "Toggle Ctrl"
+msgstr "Pulsar/Soltar Ctrl"
+
+#: ../xdd.html:139
+msgid "Alt"
+msgstr "Alt"
+
+#: ../xdd.html:139
+msgid "Toggle Alt"
+msgstr "Pulsar/Soltar Alt"
+
+#: ../xdd.html:142
+msgid "Send Tab"
+msgstr "Enviar Tabulación"
+
+#: ../xdd.html:142
+msgid "Tab"
+msgstr "Tabulación"
+
+#: ../xdd.html:145
+msgid "Esc"
+msgstr "Esc"
+
+#: ../xdd.html:145
+msgid "Send Escape"
+msgstr "Enviar Escape"
+
+#: ../xdd.html:148
+msgid "Ctrl+Alt+Del"
+msgstr "Ctrl+Alt+Del"
+
+#: ../xdd.html:148
+msgid "Send Ctrl-Alt-Del"
+msgstr "Enviar Ctrl+Alt+Del"
+
+#: ../xdd.html:156
+msgid "Shutdown/Reboot"
+msgstr "Apagar/Reiniciar"
+
+#: ../xdd.html:156
+msgid "Shutdown/Reboot..."
+msgstr "Apagar/Reiniciar..."
+
+#: ../xdd.html:162
+msgid "Power"
+msgstr "Encender"
+
+#: ../xdd.html:164
+msgid "Shutdown"
+msgstr "Apagar"
+
+#: ../xdd.html:165
+msgid "Reboot"
+msgstr "Reiniciar"
+
+#: ../xdd.html:166
+msgid "Reset"
+msgstr "Restablecer"
+
+#: ../xdd.html:171 ../xdd.html:177
+msgid "Clipboard"
+msgstr "Portapapeles"
+
+#: ../xdd.html:181
+msgid "Clear"
+msgstr "Vaciar"
+
+#: ../xdd.html:187
+msgid "Fullscreen"
+msgstr "Pantalla Completa"
+
+#: ../xdd.html:192 ../xdd.html:199
+msgid "Settings"
+msgstr "Configuraciones"
+
+#: ../xdd.html:200
+msgid "Encrypt"
+msgstr "Encriptar"
+
+#: ../xdd.html:202
+msgid "Shared Mode"
+msgstr "Modo Compartido"
+
+#: ../xdd.html:205
+msgid "View Only"
+msgstr "Solo visualización"
+
+#: ../xdd.html:209
+msgid "Clip to Window"
+msgstr "Recortar al tamaño de la ventana"
+
+#: ../xdd.html:212
+msgid "Scaling Mode:"
+msgstr "Modo de escalado:"
+
+#: ../xdd.html:214
+msgid "None"
+msgstr "Ninguno"
+
+#: ../xdd.html:215
+msgid "Local Scaling"
+msgstr "Escalado Local"
+
+#: ../xdd.html:216
+msgid "Local Downscaling"
+msgstr "Reducción de escala local"
+
+#: ../xdd.html:217
+msgid "Remote Resizing"
+msgstr "Cambio de tamaño remoto"
+
+#: ../xdd.html:222
+msgid "Advanced"
+msgstr "Avanzado"
+
+#: ../xdd.html:225
+msgid "Local Cursor"
+msgstr "Cursor Local"
+
+#: ../xdd.html:229
+msgid "Repeater ID:"
+msgstr "ID del Repetidor:"
+
+#: ../xdd.html:233
+msgid "WebSocket"
+msgstr "WebSocket"
+
+#: ../xdd.html:239
+msgid "Host:"
+msgstr "Host:"
+
+#: ../xdd.html:243
+msgid "Port:"
+msgstr "Puerto:"
+
+#: ../xdd.html:247
+msgid "Path:"
+msgstr "Ruta:"
+
+#: ../xdd.html:254
+msgid "Automatic Reconnect"
+msgstr "Reconexión automática"
+
+#: ../xdd.html:257
+msgid "Reconnect Delay (ms):"
+msgstr "Retraso en la reconexión (ms):"
+
+#: ../xdd.html:263
+msgid "Logging:"
+msgstr "Registrando:"
+
+#: ../xdd.html:275
+msgid "Disconnect"
+msgstr "Desconectar"
+
+#: ../xdd.html:294
+msgid "Connect"
+msgstr "Conectar"
+
+#: ../xdd.html:304
+msgid "Password:"
+msgstr "Contraseña:"
+
+#: ../xdd.html:318
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../xdd.html:334
+msgid "Canvas not supported."
+msgstr "Canvas no soportado."

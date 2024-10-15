@@ -1,0 +1,37 @@
+.TH noxdd_proxy 1  "June 25, 2020" "version 1.2.0" "USER COMMANDS"
+
+.SH NAME
+noxdd_proxy - noxdd proxy server
+.SH SYNOPSIS
+.B noxdd_proxy [--listen [HOST:]PORT] [--xdd xdd_HOST:PORT] [--cert CERT] [--ssl-only]
+
+Starts the WebSockets proxy and a mini-webserver and
+provides a cut-and-paste URL to go to.
+
+    --listen [HOST:]PORT  Port for proxy/webserver to listen on
+                          Default: 6080 (on all interfaces)
+    --xdd xdd_HOST:PORT   xdd server host:port proxy target
+                          Default: localhost:5900
+    --cert CERT           Path to combined cert/key file, or just
+                          the cert file if used with --key
+                          Default: self.pem
+    --key KEY             Path to key file, when not combined with cert
+    --web WEB             Path to web files (e.g. xdd.html)
+                          Default: ./
+    --ssl-only            Disable non-https connections.
+
+    --record FILE         Record traffic to FILE.session.js
+
+    --syslog SERVER       Can be local socket such as /dev/log, or a UDP host:port pair.
+
+    --heartbeat SEC       send a ping to the client every SEC seconds
+    --timeout SEC         after SEC seconds exit when not connected
+    --idle-timeout SEC    server exits after SEC seconds if there are no
+                          active connections
+
+.SH AUTHOR
+The noxdd Authors
+https://github.com/noxdd/noxdd
+
+.SH SEE ALSO
+websockify(1), nova-noxddproxy(1)

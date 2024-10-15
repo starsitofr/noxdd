@@ -1,0 +1,399 @@
+# Greek translations for noxdd package.
+# Copyright (C) 2018 The noxdd Authors
+# This file is distributed under the same license as the noxdd package.
+# Giannis Kosmas <kosmasgiannis@gmail.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: noxdd 0.6.1\n"
+"Report-Msgid-Bugs-To: noxdd@googlegroups.com\n"
+"POT-Creation-Date: 2022-12-27 15:24+0100\n"
+"PO-Revision-Date: 2017-10-11 16:16+0200\n"
+"Last-Translator: Giannis Kosmas <kosmasgiannis@gmail.com>\n"
+"Language-Team: none\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../app/ui.js:69
+msgid "HTTPS is required for full functionality"
+msgstr "Το HTTPS είναι απαιτούμενο για πλήρη λειτουργικότητα"
+
+#: ../app/ui.js:410
+msgid "Connecting..."
+msgstr "Συνδέεται..."
+
+#: ../app/ui.js:417
+msgid "Disconnecting..."
+msgstr "Aποσυνδέεται..."
+
+#: ../app/ui.js:423
+msgid "Reconnecting..."
+msgstr "Επανασυνδέεται..."
+
+#: ../app/ui.js:428
+msgid "Internal error"
+msgstr "Εσωτερικό σφάλμα"
+
+#: ../app/ui.js:1026
+msgid "Must set host"
+msgstr "Πρέπει να οριστεί ο διακομιστής"
+
+#: ../app/ui.js:1110
+msgid "Connected (encrypted) to "
+msgstr "Συνδέθηκε (κρυπτογραφημένα) με το "
+
+#: ../app/ui.js:1112
+msgid "Connected (unencrypted) to "
+msgstr "Συνδέθηκε (μη κρυπτογραφημένα) με το "
+
+#: ../app/ui.js:1135
+msgid "Something went wrong, connection is closed"
+msgstr "Κάτι πήγε στραβά, η σύνδεση διακόπηκε"
+
+#: ../app/ui.js:1138
+msgid "Failed to connect to server"
+msgstr "Αποτυχία στη σύνδεση με το διακομιστή"
+
+#: ../app/ui.js:1150
+msgid "Disconnected"
+msgstr "Αποσυνδέθηκε"
+
+#: ../app/ui.js:1165
+msgid "New connection has been rejected with reason: "
+msgstr "Η νέα σύνδεση απορρίφθηκε διότι: "
+
+#: ../app/ui.js:1168
+msgid "New connection has been rejected"
+msgstr "Η νέα σύνδεση απορρίφθηκε "
+
+#: ../app/ui.js:1234
+msgid "Credentials are required"
+msgstr "Απαιτούνται διαπιστευτήρια"
+
+#: ../xdd.html:57
+msgid "noxdd encountered an error:"
+msgstr "το noxdd αντιμετώπισε ένα σφάλμα:"
+
+#: ../xdd.html:67
+msgid "Hide/Show the control bar"
+msgstr "Απόκρυψη/Εμφάνιση γραμμής ελέγχου"
+
+#: ../xdd.html:76
+msgid "Drag"
+msgstr "Σύρσιμο"
+
+#: ../xdd.html:76
+msgid "Move/Drag Viewport"
+msgstr "Μετακίνηση/Σύρσιμο Θεατού πεδίου"
+
+#: ../xdd.html:82
+msgid "Keyboard"
+msgstr "Πληκτρολόγιο"
+
+#: ../xdd.html:82
+msgid "Show Keyboard"
+msgstr "Εμφάνιση Πληκτρολογίου"
+
+#: ../xdd.html:87
+msgid "Extra keys"
+msgstr "Επιπλέον πλήκτρα"
+
+#: ../xdd.html:87
+msgid "Show Extra Keys"
+msgstr "Εμφάνιση Επιπλέον Πλήκτρων"
+
+#: ../xdd.html:92
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: ../xdd.html:92
+msgid "Toggle Ctrl"
+msgstr "Εναλλαγή Ctrl"
+
+#: ../xdd.html:95
+msgid "Alt"
+msgstr "Alt"
+
+#: ../xdd.html:95
+msgid "Toggle Alt"
+msgstr "Εναλλαγή Alt"
+
+#: ../xdd.html:98
+msgid "Toggle Windows"
+msgstr "Εναλλαγή Παράθυρων"
+
+#: ../xdd.html:98
+msgid "Windows"
+msgstr "Παράθυρα"
+
+#: ../xdd.html:101
+msgid "Send Tab"
+msgstr "Αποστολή Tab"
+
+#: ../xdd.html:101
+msgid "Tab"
+msgstr "Tab"
+
+#: ../xdd.html:104
+msgid "Esc"
+msgstr "Esc"
+
+#: ../xdd.html:104
+msgid "Send Escape"
+msgstr "Αποστολή Escape"
+
+#: ../xdd.html:107
+msgid "Ctrl+Alt+Del"
+msgstr "Ctrl+Alt+Del"
+
+#: ../xdd.html:107
+msgid "Send Ctrl-Alt-Del"
+msgstr "Αποστολή Ctrl-Alt-Del"
+
+#: ../xdd.html:114
+msgid "Shutdown/Reboot"
+msgstr "Κλείσιμο/Επανεκκίνηση"
+
+#: ../xdd.html:114
+msgid "Shutdown/Reboot..."
+msgstr "Κλείσιμο/Επανεκκίνηση..."
+
+#: ../xdd.html:120
+msgid "Power"
+msgstr "Απενεργοποίηση"
+
+#: ../xdd.html:122
+msgid "Shutdown"
+msgstr "Κλείσιμο"
+
+#: ../xdd.html:123
+msgid "Reboot"
+msgstr "Επανεκκίνηση"
+
+#: ../xdd.html:124
+msgid "Reset"
+msgstr "Επαναφορά"
+
+#: ../xdd.html:129 ../xdd.html:135
+msgid "Clipboard"
+msgstr "Πρόχειρο"
+
+#: ../xdd.html:137
+msgid "Edit clipboard content in the textarea below."
+msgstr "Επεξεργαστείτε το περιεχόμενο του πρόχειρου στην περιοχή κειμένου παρακάτω."
+
+#: ../xdd.html:145
+#, fuzzy
+msgid "Full Screen"
+msgstr "Πλήρης Οθόνη"
+
+#: ../xdd.html:150 ../xdd.html:156
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: ../xdd.html:160
+msgid "Shared Mode"
+msgstr "Κοινόχρηστη Λειτουργία"
+
+#: ../xdd.html:163
+msgid "View Only"
+msgstr "Μόνο Θέαση"
+
+#: ../xdd.html:167
+msgid "Clip to Window"
+msgstr "Αποκοπή στο όριο του Παράθυρου"
+
+#: ../xdd.html:170
+msgid "Scaling Mode:"
+msgstr "Λειτουργία Κλιμάκωσης:"
+
+#: ../xdd.html:172
+msgid "None"
+msgstr "Καμία"
+
+#: ../xdd.html:173
+msgid "Local Scaling"
+msgstr "Τοπική Κλιμάκωση"
+
+#: ../xdd.html:174
+msgid "Remote Resizing"
+msgstr "Απομακρυσμένη Αλλαγή μεγέθους"
+
+#: ../xdd.html:179
+msgid "Advanced"
+msgstr "Για προχωρημένους"
+
+#: ../xdd.html:182
+msgid "Quality:"
+msgstr "Ποιότητα:"
+
+#: ../xdd.html:186
+msgid "Compression level:"
+msgstr "Επίπεδο συμπίεσης:"
+
+#: ../xdd.html:191
+msgid "Repeater ID:"
+msgstr "Repeater ID:"
+
+#: ../xdd.html:195
+msgid "WebSocket"
+msgstr "WebSocket"
+
+#: ../xdd.html:198
+msgid "Encrypt"
+msgstr "Κρυπτογράφηση"
+
+#: ../xdd.html:201
+msgid "Host:"
+msgstr "Όνομα διακομιστή:"
+
+#: ../xdd.html:205
+msgid "Port:"
+msgstr "Πόρτα διακομιστή:"
+
+#: ../xdd.html:209
+msgid "Path:"
+msgstr "Διαδρομή:"
+
+#: ../xdd.html:216
+msgid "Automatic Reconnect"
+msgstr "Αυτόματη επανασύνδεση"
+
+#: ../xdd.html:219
+msgid "Reconnect Delay (ms):"
+msgstr "Καθυστέρηση επανασύνδεσης (ms):"
+
+#: ../xdd.html:224
+msgid "Show Dot when No Cursor"
+msgstr "Εμφάνιση Τελείας όταν δεν υπάρχει Δρομέας"
+
+#: ../xdd.html:229
+msgid "Logging:"
+msgstr "Καταγραφή:"
+
+#: ../xdd.html:238
+msgid "Version:"
+msgstr "Έκδοση:"
+
+#: ../xdd.html:246
+msgid "Disconnect"
+msgstr "Αποσύνδεση"
+
+#: ../xdd.html:269
+msgid "Connect"
+msgstr "Σύνδεση"
+
+#: ../xdd.html:278
+msgid "Server identity"
+msgstr "Ταυτότητα Διακομιστή"
+
+#: ../xdd.html:281
+msgid "The server has provided the following identifying information:"
+msgstr "Ο διακομιστής παρείχε την ακόλουθη πληροφορία ταυτοποίησης:"
+
+#: ../xdd.html:285
+msgid "Fingerprint:"
+msgstr "Δακτυλικό αποτύπωμα:"
+
+#: ../xdd.html:288
+msgid ""
+"Please verify that the information is correct and press \"Approve\". "
+"Otherwise press \"Reject\"."
+msgstr ""
+"Παρακαλώ επαληθεύσετε ότι η πληροφορία είναι σωστή και πιέστε \"Αποδοχή\". "
+"Αλλιώς πιέστε \"Απόρριψη\"."
+
+#: ../xdd.html:293
+msgid "Approve"
+msgstr "Αποδοχή"
+
+#: ../xdd.html:294
+msgid "Reject"
+msgstr "Απόρριψη"
+
+#: ../xdd.html:302
+msgid "Credentials"
+msgstr "Διαπιστευτήρια"
+
+#: ../xdd.html:306
+msgid "Username:"
+msgstr "Κωδικός Χρήστη:"
+
+#: ../xdd.html:310
+msgid "Password:"
+msgstr "Κωδικός Πρόσβασης:"
+
+#: ../xdd.html:314
+msgid "Send Credentials"
+msgstr "Αποστολή Διαπιστευτηρίων"
+
+#: ../xdd.html:323
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#~ msgid "Password is required"
+#~ msgstr "Απαιτείται ο κωδικός πρόσβασης"
+
+#~ msgid "viewport drag"
+#~ msgstr "σύρσιμο θεατού πεδίου"
+
+#~ msgid "Active Mouse Button"
+#~ msgstr "Ενεργό Πλήκτρο Ποντικιού"
+
+#~ msgid "No mousebutton"
+#~ msgstr "Χωρίς Πλήκτρο Ποντικιού"
+
+#~ msgid "Left mousebutton"
+#~ msgstr "Αριστερό Πλήκτρο Ποντικιού"
+
+#~ msgid "Middle mousebutton"
+#~ msgstr "Μεσαίο Πλήκτρο Ποντικιού"
+
+#~ msgid "Right mousebutton"
+#~ msgstr "Δεξί Πλήκτρο Ποντικιού"
+
+#~ msgid "Clear"
+#~ msgstr "Καθάρισμα"
+
+#~ msgid "Canvas not supported."
+#~ msgstr "Δεν υποστηρίζεται το στοιχείο Canvas"
+
+#~ msgid "Disconnect timeout"
+#~ msgstr "Παρέλευση χρονικού ορίου αποσύνδεσης"
+
+#~ msgid "Local Downscaling"
+#~ msgstr "Τοπική Συρρίκνωση"
+
+#~ msgid "Local Cursor"
+#~ msgstr "Τοπικός Δρομέας"
+
+#~ msgid ""
+#~ "Forcing clipping mode since scrollbars aren't supported by IE in "
+#~ "fullscreen"
+#~ msgstr ""
+#~ "Εφαρμογή λειτουργίας αποκοπής αφού δεν υποστηρίζονται οι λωρίδες κύλισης "
+#~ "σε πλήρη οθόνη στον IE"
+
+#~ msgid "True Color"
+#~ msgstr "Πραγματικά Χρώματα"
+
+#~ msgid "Style:"
+#~ msgstr "Στυλ:"
+
+#~ msgid "default"
+#~ msgstr "προεπιλεγμένο"
+
+#~ msgid "Apply"
+#~ msgstr "Εφαρμογή"
+
+#~ msgid "Connection"
+#~ msgstr "Σύνδεση"
+
+#~ msgid "Token:"
+#~ msgstr "Διακριτικό:"
+
+#~ msgid "Send Password"
+#~ msgstr "Αποστολή Κωδικού Πρόσβασης"

@@ -1,0 +1,61 @@
+name: noxdd
+base: core22 # the base snap is the execution environment for this snap
+version: git
+summary: Open Source xdd client using HTML5 (WebSockets, Canvas)
+description: |
+  Open Source xdd client using HTML5 (WebSockets, Canvas).
+  noxdd is both a xdd client JavaScript library as well as an
+  application built on top of that library. noxdd runs well in any
+  modern browser including mobile browsers (iOS and Android).
+
+grade: stable
+confinement: strict
+
+parts:
+    noxdd:
+        source: .
+        plugin: dump
+        organize:
+            utils/noxdd_proxy: /
+        stage:
+            - xdd.html
+            - app
+            - core/**/*.js
+            - vendor/**/*.js
+            - noxdd_proxy
+
+    noxdd-deps:
+        plugin: nil
+        stage-packages:
+            - bash
+
+    svc-script:
+        source: snap/local
+        plugin: dump
+        stage:
+            - svc_wrapper.sh
+
+    svc-script-deps:
+        plugin: nil
+        stage-packages:
+            - bash
+            - jq
+
+    websockify:
+        source: https://github.com/noxdd/websockify/archive/v0.12.0.tar.gz
+        plugin: python
+        stage-packages:
+            - python3-numpy
+
+hooks:
+    configure:
+        plugs: [network, network-bind]
+
+apps:
+    noxdd:
+        command: ./noxdd_proxy
+        plugs: [network, network-bind]
+    noxddsvc:
+        command: ./svc_wrapper.sh
+        daemon: forking
+        plugs: [network, network-bind]
